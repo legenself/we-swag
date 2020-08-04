@@ -1,7 +1,7 @@
 //{{ data.openapi }}
 //通过we-swag生成
 
-
+var baseurl=""
 const request = (url, method, data) => {
     var promise = new Promise((resolve, reject) => {
         //提示一下
@@ -10,7 +10,7 @@ const request = (url, method, data) => {
         })
         //网络请求
         wx.request({
-            url: url,
+            url: baseurl+url,
             data: data,
             method: method,
             //全局header在这里设置
