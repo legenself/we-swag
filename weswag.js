@@ -9,12 +9,17 @@ const fs = require('fs');
 const p = require('path')
 
 program.version(require("./package.json").version, '-v') // 设置版本
-    .option('-f, --file <file>', '填入文件路径') // 自定义形参[port]
+    .option('-f, --file <file>', '输入数据 data.json') // 自定义形参[port]
+    .option('-t, --template [file]', '输入njk模板')
+    .option('-n, --name [file]', '输入njk名称', 'requestTemplate')
     .parse(process.argv); // 参数数组
 
 console.log("we-swag version:" + chalk.green.bold(program._version));
 console.log("swagger doc path:" + chalk.green.bold(program.file));
 
+var template = {
+
+}
 
 
 
