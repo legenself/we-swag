@@ -7,7 +7,7 @@
 <br />
 <p align="center">
  <a href="https://github.com/legenself/we-swag">
- <img src="image/banner.gif" alt="Logo"height="180">
+ <img src="image/usage.png" alt="Logo"height="180">
  </a>
  <h3 align="center">We-Swag</h3>
  <p align="center">
@@ -24,26 +24,37 @@
  </p>
 </p>
 
-## Table of Contents
-* [About the Project](#about-the-project)
- * [Built With](#built-with)
-* [Getting Started](#getting-started)
- * [Prerequisites](#prerequisites)
- * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-## 安装方法
+## 概述
+- [概述](#概述)
+- [关于这个项目](#关于这个项目)
+  - [第三方工具](#第三方工具)
+- [开始使用](#开始使用)
+  - [安装方法](#安装方法)
+  - [使用方法](#使用方法)
+- [待开发功能](#待开发功能)
+
+
+## 关于这个项目
+一个为了提高微信小程序对接后端接口效率的小工具
+
+### 第三方工具
+它通过njk模板文件和swagger的json data，快速生成微信小程序的request
+- swagger
+- njk
+
+## 开始使用
+
+### 安装方法
 ```
-npm install we-swag
+npm install we-swag -g
 ```
-## 使用方法
+### 使用方法
 ```
 weswag -f [你的swagger.json文件路径]
 ```
-
+## 待开发功能
+- 通过远程地址生成request 文件
+- 通过自定义模板生成文件
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/legenself/we-swag.svg?style=flat-square
