@@ -7,7 +7,7 @@
 <br />
 <p align="center">
  <a href="https://github.com/legenself/we-swag">
- <img src="image/usage.png" alt="Logo"height="180">
+ <img src="image/usage.png" alt="Logo" height="380">
  </a>
  <h3 align="center">We-Swag</h3>
  <p align="center">
