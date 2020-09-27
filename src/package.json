@@ -1,10 +1,11 @@
 {
     "name": "we-swag",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "description": "generate weixin miniprogram request by swagger file",
     "main": "weswag.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node weswag.js -u http://132.232.166.224:8989/swagger/v1/swagger.json "
     },
     "bin": {
         "weswag": "weswag.js"
@@ -18,6 +19,8 @@
     "dependencies": {
         "chalk": "^4.1.0",
         "commander": "^6.0.0",
-        "nunjucks": "^3.2.2"
+        "nunjucks": "^3.2.2",
+        "request": "^2.88.2",
+        "xd-synchttp": "^0.4.6"
     }
 }
