@@ -14,6 +14,7 @@ program.storeOptionsAsProperties(true)
     .option('-u, --url <url>',"file是网络链接")
     .option('-t, --template [file]', '输入njk模板')
     .option('-n, --name [file]', '输入njk名称', 'requestTemplate')
+    .option('-p, --preprocess [preprocess]','预处理函数','process.js')
     .option('-o, --output [file]', '输出文件名', 'requestSchema.js')
     .parse(process.argv); // 参数数组
 console.log("we-swag version:" + chalk.green.bold(program._version));
@@ -29,13 +30,16 @@ request(program.url).then(res=>{
         console.log("api:" + chalk.green(path));
     }
     var template=''
-    if(program.template){
-        template = fs.readFileSync(program.template, 'utf-8')
-
+    if(program.template.indexOf('.njk')==-1){
+        template = fs.readFileSync(p.resolve(__dirname + `/template/${program.template}.njk`), 'utf-8')
     }else{
-        template = fs.readFileSync(p.resolve(__dirname + '/template/requestTemplate.njk'), 'utf-8')
-
+        template = fs.readFileSync(program.template, 'utf-8')
     }
+    // const pre = require(program.preprocess)
+    // console.log(program.preprocess)
+    const pre=require(`${program.preprocess}`)
+    data= pre(data)
+    console.log(data)
     var content = nunjucks.renderString(template, { data: data });
     fs.writeFileSync(program.output, content)
 })

@@ -50,8 +50,13 @@ npm install we-swag -g
 ```
 ### 使用方法
 ```
-weswag -u [你的swagger.json文件地址] -t [你的njk模版路径] -o [输出文件名]
+weswag -u [你的swagger.json文件地址] -t [你的njk模版路径] -o [输出文件名] -p [swagger json预处理函数]
 ```
+
+```
+node weswag.js  -u http://132.232.166.224:8989/swagger/v1/swagger.json -t schemaTemplate -p ./schemaprocess.js
+```
+
 ## 待开发功能
 - 通过远程地址生成request 文件
 - 通过自定义模板生成文件

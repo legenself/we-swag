@@ -4,7 +4,6 @@ var request = require("request");
 
 
 module.exports= function(url){
-    console.log(url)
     return new Promise((resolve, reject)=>{
       
         request(url, function(error, response, body) {
