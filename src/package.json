@@ -1,6 +1,6 @@
 {
     "name": "we-swag",
-    "version": "0.1.13",
+    "version": "0.1.15",
     "description": "generate weixin miniprogram request by swagger file",
     "main": "weswag.js",
     "scripts": {

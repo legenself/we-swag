@@ -4,15 +4,15 @@
 {% for key,value in data.components.schemas %}
 //{{key}}
 const {{key}}={
-    'type':'{{value.type}}',
-    'properties':{  {% for k,v in value.properties %}
-            '{{k}}':{
-                'type':"{{v.type}}",{% if v.schema!=undefined %}'schema':'{{v.schema}}',{% endif %} 
-                'description':"{{v.description}}"{% if v.format!=undefined %},'format':'{{v.format}}'{% endif %} {% if v.maxLength!=undefined %},'maxLength':'{{v.maxLength}}'{% endif %}{% if v.minLength!=undefined %},'minLength':'{{v.minLength}}'{% endif %}{% if v.minimum!=undefined %},'minimum':'{{v.minimum}}'{% endif %}{% if v.maximum!=undefined %},'maximum':'{{v.maximum}}'{% endif %}
+    type:'{{value.type}}',
+    properties:{  {% for k,v in value.properties %}
+            {{k}}:{
+                type:"{{v.type}}",{% if v.schema!=undefined %}schema:{{v.schema}},{% endif %} 
+                description:"{{v.description}}"{% if v.format!=undefined %},format:'{{v.format}}'{% endif %} {% if v.maxLength!=undefined %},maxLength:{{v.maxLength}}{% endif %}{% if v.minLength!=undefined %},minLength:{{v.minLength}}{% endif %}{% if v.minimum!=undefined %},minimum:{{v.minimum}}{% endif %}{% if v.maximum!=undefined %},maximum:{{v.maximum}}{% endif %}
             }, {% endfor %}
     }
 }{% endfor %}
 
-export default {
+export  {
     {% for key,value in data.components.schemas %}{{key}},{% endfor %}
 }
