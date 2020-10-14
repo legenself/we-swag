@@ -5,6 +5,7 @@
 //Memo
 const Memo={
     type:'object',
+    description:'消息',
     properties:{  
             id:{
                 type:"integer", 
@@ -30,7 +31,12 @@ const Memo={
                 type:"boolean", 
                 description:"消息是否公开" 
             }, 
-    }
+    } 
+}
+//typee
+const typee={
+    type:'string',
+    enum:["typea","typeb"],
 }
 //subInput
 const subInput={
@@ -48,11 +54,16 @@ const subInput={
                 type:"number", 
                 description:"",format:'double' ,minimum:0
             }, 
-    }
+            tt:{
+                type:"object",schema:typee, 
+                description:"" 
+            }, 
+    } 
 }
 //ComplexInput
 const ComplexInput={
     type:'object',
+    description:'测试复杂输入',
     properties:{  
             name:{
                 type:"string", 
@@ -70,11 +81,12 @@ const ComplexInput={
                 type:"object",schema:subInput, 
                 description:"" 
             }, 
-    }
+    } 
 }
 //User
 const User={
     type:'object',
+    description:'用户信息表',
     properties:{  
             id:{
                 type:"integer", 
@@ -92,7 +104,7 @@ const User={
                 type:"string", 
                 description:"用户密码" 
             }, 
-    }
+    } 
 }
 //WeatherForecast
 const WeatherForecast={
@@ -114,9 +126,9 @@ const WeatherForecast={
                 type:"string", 
                 description:"" 
             }, 
-    }
+    } 
 }
 
-export default {
-    Memo,subInput,ComplexInput,User,WeatherForecast,
+export  {
+    Memo,typee,subInput,ComplexInput,User,WeatherForecast,
 }

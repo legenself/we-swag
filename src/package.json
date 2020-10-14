@@ -1,11 +1,11 @@
 {
     "name": "we-swag",
-    "version": "0.1.15",
+    "version": "0.1.17",
     "description": "generate weixin miniprogram request by swagger file",
     "main": "weswag.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node weswag.js -u http://132.232.166.224:8989/swagger/v1/swagger.json "
+        "start": "node weswag.js -u http://132.232.166.224:8989/swagger/v1/swagger.json -t schemaTemplate  -p ./schemaprocess.js"
     },
     "bin": {
         "weswag": "weswag.js"

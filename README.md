@@ -70,3 +70,4 @@ node weswag.js  -u http://132.232.166.224:8989/swagger/v1/swagger.json -t schema
 [stars-url]: https://github.com/legenself/we-swag/stargazers
 [issues-shield]: https://img.shields.io/github/issues/legenself/we-swag.svg?style=flat-square
 [issues-url]: https://github.com/legenself/we-swag/issues
+
